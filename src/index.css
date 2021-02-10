@@ -1,0 +1,12 @@
+
+.app{
+  background-image:url('./images/Night.png');
+  background-size: cover;
+  transition: 0.4 ease-out;
+}
+
+.appDay{
+  background-image:url('./images/day.jpg');
+  background-size: cover;
+  transition: 0.4 ease-out;
+}
