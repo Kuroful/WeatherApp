@@ -86,7 +86,7 @@ function App() {
   return (
     <div className={ ((hourTime.hour >= 6 && hourTime.hour <= 18) ? 'appDay' : 'app')}>
       <main>
-      <h1 className="title"> Weather Application {hourTime.hour} </h1>
+      <h1 className="title"> Weather Application </h1>
       <div className="date"> Today is {dateBuilder(new Date())}</div>
       <div className="time"> It is currently {timeBuilder(new Date())} ET</div>
       <div className="searchBox">
