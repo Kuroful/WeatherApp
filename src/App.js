@@ -5,9 +5,13 @@ const api = {
   key: "c82b1a94b8af19b14ef3e51c220c554d",
   base: "https://api.openweathermap.org/data/2.5/"
 }
+const n = new Date() 
+const hourTime = {
+  hour: n.getHours()
+}
+
 
 function App() {
-
   const [city, setCity] = useState('');
   const [weather, setWeather] = useState('');
 
@@ -59,9 +63,6 @@ function App() {
   }
 
 
-  const t = new Date() 
-  let hour = t.getHours();
-
   const weatherPic = (w) => {
     if (w === "Clouds"){
       return "./images/cloud.png";
@@ -83,10 +84,9 @@ function App() {
 
 
   return (
-    
-    <div className={({hour} >= 6 && {hour} <= 18) ? 'appDay' : 'app'}>
+    <div className={ ((hourTime.hour >= 6 && hourTime.hour <= 18) ? 'appDay' : 'app')}>
       <main>
-      <h1 className="title"> Weather Application</h1>
+      <h1 className="title"> Weather Application {hourTime.hour} </h1>
       <div className="date"> Today is {dateBuilder(new Date())}</div>
       <div className="time"> It is currently {timeBuilder(new Date())} ET</div>
       <div className="searchBox">
